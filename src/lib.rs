@@ -625,7 +625,6 @@
 //! # }
 //! ```
 
-use crate::jwt::{JsonWebToken, JsonWebTokenAccess, JsonWebTokenAlgorithm, JsonWebTokenHeader};
 use crate::verification::{AudiencesClaim, IssuerClaim};
 
 // Defined first since other modules need the macros, and definition order is significant for
@@ -705,7 +704,10 @@ pub use crate::discovery::{
 };
 pub use crate::id_token::IdTokenFields;
 pub use crate::id_token::{IdToken, IdTokenClaims};
-pub use crate::jwt::{JsonWebTokenError, JsonWebTokenType, NormalizedJsonWebTokenType};
+pub use crate::jwt::{
+    JsonWebToken, JsonWebTokenAccess, JsonWebTokenAlgorithm, JsonWebTokenError, JsonWebTokenHeader,
+    JsonWebTokenType, NormalizedJsonWebTokenType,
+};
 pub use crate::logout::{LogoutProviderMetadata, LogoutRequest, ProviderMetadataWithLogout};
 pub use crate::token::TokenResponse;
 // Flatten the module hierarchy involving types. They're only separated to improve code
